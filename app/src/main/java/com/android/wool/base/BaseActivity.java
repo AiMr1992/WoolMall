@@ -26,7 +26,6 @@ public abstract class BaseActivity<T extends DetachController> extends AppCompat
     public RelativeLayout layoutTitle;
     public T presenter;
     private ProgressDialog progressDialog;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
