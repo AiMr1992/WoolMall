@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mobile="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/app_black"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+        <include layout="@layout/layout_actionbar"/>
+        <com.android.wool.view.constom.MultiEditTextView
+            android:id="@+id/edit_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:hint="@string/reset_pwd"
+            android:textColorHint="@color/edit_phone"
+            android:textSize="15sp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:alpha="0.5"
+            style="@style/text_black15"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            mobile:close_drawable="@drawable/login_delete"
+            mobile:close_drawable_width="20dp"
+            mobile:close_drawable_height="20dp"
+            />
+        <include layout="@layout/view_liner_h_m_left_right15"/>
+
+        <com.android.wool.view.constom.MultiEditTextView
+            android:id="@+id/edit_pwd2"
+            style="@style/text_black15"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:alpha="0.5"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/reset_pwd2"
+            android:singleLine="true"
+            android:textColorHint="@color/edit_phone"
+            android:textSize="15sp"
+            android:inputType="textPassword"
+            mobile:close_drawable="@drawable/login_delete"
+            mobile:close_drawable_width="20dp"
+            mobile:close_drawable_height="20dp"
+            />
+
+        <include layout="@layout/view_liner_h_m_left_right15"/>
+        <TextView
+            android:id="@+id/tv_commit"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bg_login"
+            android:text="@string/commit"
+            style="@style/text_while15"
+            android:gravity="center"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_bottom_img"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

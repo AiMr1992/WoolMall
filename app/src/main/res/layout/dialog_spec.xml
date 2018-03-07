@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:paddingBottom="15dp"
+            android:paddingLeft="125dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="￥550.00"
+                    android:textColor="@color/text_red"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_goods"
+                    style="@style/text_Brown13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="商品编号：789900456789" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/dialog_close" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            />
+    </RelativeLayout>
+
+    <include layout="@layout/view_liner_h"/>
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:fillViewport="true"
+       android:layout_weight="1"
+       android:background="@color/white">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:focusable="true"
+           android:focusableInTouchMode="true">
+           <com.android.wool.view.constom.shop.ShoppingSelectView
+               android:id="@+id/select_view"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingBottom="10dp"
+               />
+           <include layout="@layout/item_spce_add"/>
+       </LinearLayout>
+   </ScrollView>
+
+    <include layout="@layout/view_liner_h"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/tv_add"
+            style="@style/text_while15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/selector_btn_enable"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/enter"
+            />
+    </LinearLayout>
+</LinearLayout>

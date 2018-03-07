@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_black"
+    android:fitsSystemWindows="false"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/home_bg_color">
+        <LinearLayout
+            android:id="@+id/layout_personal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mine_bg"
+            >
+
+            <ImageView
+                android:id="@+id/round_view"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/default_mine"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/round_view"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_personal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mine"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-8dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_order"
+                    style="@style/mine_options"
+                    android:drawableLeft="@drawable/mine_order"
+                    android:text="@string/mine_order" />
+
+                <include layout="@layout/view_liner_h_left40" />
+                <RelativeLayout
+                    android:id="@+id/tv_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/msg_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:text="@string/mine_msg"
+                        android:drawableLeft="@drawable/mine_msg"
+                        android:drawablePadding="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_count"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/red_point"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:layout_toRightOf="@+id/msg_list"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginLeft="3dp"
+                        android:visibility="gone"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/next"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        />
+                </RelativeLayout>
+                <include layout="@layout/view_liner_h_left40" />
+                <TextView
+                    android:id="@+id/tv_house"
+                    style="@style/mine_options"
+                    android:drawableLeft="@drawable/mine_house"
+                    android:text="@string/mine_collection" />
+
+                <include layout="@layout/view_liner_h_left40" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    style="@style/mine_options"
+                    android:drawableLeft="@drawable/mine_address"
+                    android:text="@string/mine_address" />
+
+                <include layout="@layout/view_liner_h_left40" />
+
+                <TextView
+                    android:id="@+id/tv_install"
+                    style="@style/mine_options"
+                    android:drawableLeft="@drawable/mine_install"
+                    android:text="@string/mine_install" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

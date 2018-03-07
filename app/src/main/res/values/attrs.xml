@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义框清除按钮-->
+    <declare-styleable name="MultiEditTextView">
+        <attr name="close_drawable" format="integer"></attr>
+        <attr name="close_drawable_width" format="dimension"></attr>
+        <attr name="close_drawable_height" format="dimension"></attr>
+    </declare-styleable>
+    <!-- 城市添加 -->
+    <declare-styleable name="NumberPicker">
+        <attr name="normalTextColor" format="color" />
+        <attr name="normalTextSize" format="dimension" />
+        <attr name="selectedTextColor" format="color" />
+        <attr name="selectedTextSize" format="dimension" />
+        <attr name="unitHeight" format="dimension" />
+        <attr name="itemNumber" format="integer"/>
+        <attr name="lineColor" format="color" />
+        <attr name="maskHeight" format="dimension"/>
+        <attr name="noEmpty" format="boolean"/>
+        <attr name="isEnable" format="boolean"/>
+    </declare-styleable>
+</resources>

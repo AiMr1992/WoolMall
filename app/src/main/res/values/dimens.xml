@@ -1,0 +1,4 @@
+<resources>
+    <!--dialog弹窗的圆角弧度-->
+    <dimen name="dialog_radius">10dp</dimen>
+</resources>

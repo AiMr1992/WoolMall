@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.wool">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--友盟-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application
+        android:name="com.android.wool.MyApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.android.wool.view.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StartAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 登录 -->
+        <activity
+            android:name="com.android.wool.view.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            />
+        <!--主页-->
+        <activity android:name="com.android.wool.view.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"/>
+        <!--找回密码-->
+        <activity android:name="com.android.wool.view.activity.RetrieveActivity"
+            android:screenOrientation="portrait"/>
+        <!--设置密码-->
+        <activity android:name="com.android.wool.view.activity.ResetPwdActivity"
+            android:screenOrientation="portrait"/>
+        <!--个人中心-->
+        <activity android:name="com.android.wool.view.activity.PersonalActivity"
+            android:screenOrientation="portrait"/>
+        <!--重置姓名-->
+        <activity android:name="com.android.wool.view.activity.ResetNameActivity"
+            android:screenOrientation="portrait"/>
+        <!--关于-->
+        <activity android:name="com.android.wool.view.activity.AboutActivity"
+            android:screenOrientation="portrait"/>
+        <!--设置-->
+        <activity android:name="com.android.wool.view.activity.SettingActivity"
+            android:screenOrientation="portrait"/>
+        <!--我的消息-->
+        <activity android:name="com.android.wool.view.activity.MsgListActivity"
+            android:screenOrientation="portrait"/>
+        <!--我的收藏-->
+        <activity android:name="com.android.wool.view.activity.HouseListActivity"
+            android:screenOrientation="portrait"/>
+        <!--管理地址-->
+        <activity android:name="com.android.wool.view.activity.LocationListActivity"
+            android:screenOrientation="portrait"/>
+        <!--增加新地址-->
+        <activity android:name="com.android.wool.view.activity.LocationAddActivity"
+            android:screenOrientation="portrait"/>
+        <!--订单列表-->
+        <activity android:name="com.android.wool.view.activity.OrderListActivity"
+            android:screenOrientation="portrait"/>
+        <!--订单详情-->
+        <activity android:name="com.android.wool.view.activity.OrderDetailActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="myapp" android:host="jp.app" android:pathPrefix="/openwith"/>
+            </intent-filter>
+        </activity>
+        <!--扫一扫-->
+        <activity android:name="com.android.wool.view.activity.ScanQcActivity"
+            android:screenOrientation="portrait"/>
+        <!--检索热搜-->
+        <activity android:name="com.android.wool.view.activity.SearchKeyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!--分类商品列表-->
+        <activity android:name="com.android.wool.view.activity.SearchGoodsListActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--商品详情-->
+        <activity android:name="com.android.wool.view.activity.GoodsInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <!--确认订单-->
+        <activity android:name="com.android.wool.view.activity.BuildOrderActivity"
+            android:screenOrientation="portrait"/>
+        <!--支付方式-->
+        <activity android:name="com.android.wool.view.activity.PayTypeActivity"
+            android:screenOrientation="portrait"/>
+        <!--物流详情-->
+        <activity android:name="com.android.wool.view.activity.LogisticsListActivity"
+            android:screenOrientation="portrait"/>
+        <!--维密专场-->
+        <activity android:name="com.android.wool.view.activity.SpecialListActivity"
+            android:screenOrientation="portrait"/>
+        <!--Html-->
+        <activity android:name="com.android.wool.view.activity.HtmlActivity"
+            android:screenOrientation="portrait"/>
+        <meta-data
+            android:name="com.android.wool.util.MyGlideModule"
+            android:value="GlideModule" />
+        <!--蒲公英-->
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="7eabff59768a29a66ad09a6d48459cc4" >
+        </meta-data>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.android.wool.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <!--友盟-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5a66ef27a40fa35815000266" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}"/>
+        <activity
+            android:name="com.android.wool.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:theme="@style/Theme.UMDefault"
+            android:excludeFromRecents="true"
+            />
+    </application>
+</manifest>

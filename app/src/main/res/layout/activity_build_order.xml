@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/app_black"
+    >
+    <include layout="@layout/layout_actionbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/home_bg_color"
+        >
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@null"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:descendantFocusability="beforeDescendants"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/liner_color"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="合计："
+            android:textSize="12sp"
+            android:textColor="@color/edit_phone"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/app_news_price"
+            android:layout_toRightOf="@id/tv_text"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_discount"
+            style="@style/text_Brown13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:alpha="0.8"
+            android:layout_weight="1"
+            android:layout_toRightOf="@+id/tv_price"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_commit"
+            style="@style/text_while15"
+            android:layout_width="126dp"
+            android:layout_height="match_parent"
+            android:background="@color/app_black"
+            android:gravity="center"
+            android:text="@string/commit_order"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+</LinearLayout>

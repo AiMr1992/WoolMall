@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/app_black"
+    >
+    <include layout="@layout/layout_actionbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_bg_color"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/tv_clear"
+                style="@style/options"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    style="@style/text_black14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clear_location" />
+
+                <TextView
+                    android:id="@+id/tv_text"
+                    style="@style/text_black14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/next"
+                    android:gravity="right" />
+
+            </LinearLayout>
+
+            <include layout="@layout/view_liner_h_left15" />
+
+            <TextView
+                android:id="@+id/tv_about"
+                style="@style/text_black14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableRight="@drawable/next"
+                android:padding="15dp"
+                android:text="@string/about" />
+        </LinearLayout>
+
+        <include layout="@layout/view_liner_h" />
+
+        <TextView
+            android:id="@+id/tv_out"
+            style="@style/text_while15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="60dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/bg_login_out"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/exit" />
+    </RelativeLayout>
+</LinearLayout>

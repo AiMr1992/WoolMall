@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mobile="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_black"
+    android:fitsSystemWindows="true"
+    >
+    <include layout="@layout/layout_actionbar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/text_Brown13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="@string/receiver_name" />
+
+                <com.android.wool.view.constom.MultiEditTextView
+                    android:id="@+id/edit_receiver"
+                    style="@style/text_black15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:alpha="0.5"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColorHint="@color/edit_phone"
+                    android:textSize="15sp"
+                    mobile:close_drawable="@drawable/login_delete"
+                    mobile:close_drawable_height="20dp"
+                    mobile:close_drawable_width="20dp"
+                    />
+            </LinearLayout>
+
+            <include layout="@layout/view_liner_h_left15" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/text_Brown13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="@string/receiver_phone" />
+
+                <com.android.wool.view.constom.MultiEditTextView
+                    android:id="@+id/edit_phone"
+                    style="@style/text_black15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:alpha="0.5"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:inputType="phone"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColorHint="@color/edit_phone"
+                    android:textSize="15sp"
+                    mobile:close_drawable="@drawable/login_delete"
+                    mobile:close_drawable_height="20dp"
+                    mobile:close_drawable_width="20dp"
+                    />
+            </LinearLayout>
+
+            <include layout="@layout/view_liner_h_left15" />
+
+            <LinearLayout
+                android:id="@+id/mine_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/text_Brown13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:text="@string/mine_location" />
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    style="@style/text_Brown13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:alpha="0.5"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/next"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="15dp"
+                    android:text="@string/select_location" />
+            </LinearLayout>
+
+            <include layout="@layout/view_liner_h_left15" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:alpha="0.5"
+                android:background="@null"
+                android:gravity="left"
+                android:hint="@string/label_location"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="13dp"
+                android:textColorHint="@color/edit_phone"
+                android:textSize="15sp" />
+
+            <include layout="@layout/view_liner_h_left15" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <TextView
+                    style="@style/text_Brown13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="15dp"
+                    android:text="@string/setting_default" />
+
+                <CheckBox
+                    android:id="@+id/check_expire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/selector_check_switch"
+                    android:paddingRight="15dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/home_bg_color"
+        />
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/app_black"
+        android:gravity="center"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        />
+</LinearLayout>

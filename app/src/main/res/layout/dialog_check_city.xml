@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/view_liner_h"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/close_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:clickable="true"
+            style="@style/text_black15"
+            android:padding="15dp"
+            />
+
+        <TextView
+            android:id="@+id/selected_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:text="确认"
+            style="@style/text_black15"
+            android:padding="15dp"
+            />
+    </RelativeLayout>
+
+    <include layout="@layout/view_liner_h"/>
+
+    <com.android.wool.view.constom.CityPicker
+        android:id="@+id/check_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+</LinearLayout>

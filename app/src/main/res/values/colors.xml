@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="blue">#00f</color>
+    <color name="blue_btn">#0033cc</color>
+    <color name="login_tab">#DEAC74</color>
+    <color name="login_tab_enable">#ccc</color>
+    <color name="edit_phone">#5a4c4c</color>
+    <color name="liner_color">#EEEDED</color>
+    <color name="retrieve_head">#F9F9F9</color>
+    <color name="home_bg_color">#F4F5F7</color>
+    <color name="mine_liner_color">#d3ac77</color>
+    <!-- 红色点 -->
+    <color name="message_point">#F86060</color>
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+    <color name="copy_transparent">#33000000</color>
+    <color name="login_out">#FF5353</color>
+    <color name="text_red">#FB5B3D</color>
+    <color name="bg_subscribe">#FF645F</color>
+    <color name="subscribe_text">#574c4c</color>
+    <color name="rmb_text">#CAAC7A</color>
+    <color name="gray">#cccccc</color>
+    <color name="head_liner">#CDC9C9</color>
+    <color name="na_type_y">#857C7C</color>
+    <color name="order_head">#e1564f</color>
+    <color name="add_plus_frame">#D6D6D6</color>
+    <color name="bg_rate">#2F3031</color>
+    <!--进度条默认颜色-->
+    <color name="default_color">#92caff</color>
+    <color name="select_color">#ffc600</color>
+
+
+
+    <!--羊毛风格-->
+    <color name="app_black">#a30202</color>
+    <color name="app_news_price">@color/text_red</color>
+    <!--导航栏底部字体颜色-->
+    <color name="app_na_text">@color/app_black</color>
+    <color name="app_na_text_n">#585858</color>
+
+    <!-- zxing -->
+    <color name="possible_result_points">#c0ffbd21</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="view_frame">#1EB4F9</color>
+    <color name="green">#0f0</color>
+    <color name="dialog_text_color">#0079FE</color>
+</resources>

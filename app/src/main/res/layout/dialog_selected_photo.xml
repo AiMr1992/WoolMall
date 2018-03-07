@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_dialog_white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="请选择图片"
+            android:gravity="center"
+            android:padding="10dp"
+            style="@style/text_black14"
+            />
+        <include layout="@layout/view_liner_h"/>
+        <TextView
+            android:id="@+id/tv_pz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="拍照"
+            android:gravity="center"
+            android:padding="15dp"
+            android:background="@drawable/selector_sex1"
+            android:textColor="@drawable/selector_sex_text"/>
+        <include layout="@layout/view_liner_h"/>
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="本地相册"
+            android:gravity="center"
+            android:padding="15dp"
+            android:background="@drawable/selector_sex2"
+            android:textColor="@drawable/selector_sex_text"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:gravity="center"
+        android:background="@drawable/selector_sex3"
+        android:padding="15dp"
+        android:textColor="@drawable/selector_sex_text"
+        android:layout_marginTop="10dp"
+        />
+</LinearLayout>
